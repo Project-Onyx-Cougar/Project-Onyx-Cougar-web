@@ -1,29 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-const openMenu = () => {
-  document.querySelector(".sidebar")?.classList.add("open");
-}
-
-const closeMenu = () => {
-  document.querySelector(".sidebar")?.classList.remove("open");
-}
-
 function App() {
+
+  const openMenu = () => {
+    document.querySelector(".sidebar")?.classList.add("open");
+  }
+  
+  const closeMenu = () => {
+    document.querySelector(".sidebar")?.classList.remove("open");
+  }
+
+
   return (
     <div className="grid-container">
-        <header className="header">
+
+      <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Onyx Cougar</title>
+      </head>
+
+      <body>
+        <div>
+          <header className="header">
             <div className="brand">
-                <button onClick={openMenu}>&#9776</button>
+                <button onClick={openMenu}>&#9776;</button>
                 <a href="index.html">Onyx Cougar</a>
             </div>
             <div className="header-links">
                 <a href="cart.html">Cart</a>
                 <a href="signin.html">Sign In</a>
             </div>
-        </header>
-        <aside className="sidebar">
+          </header>
+          <aside className="sidebar">
             <h3>Shopping Categories</h3>
             <button className="sidebar-close-button" onClick={closeMenu}>x</button>
             <ul>
@@ -35,8 +44,8 @@ function App() {
                     <a href="index.html">Shirts</a>
                 </li>
             </ul>
-        </aside>
-        <main>
+          </aside>
+          <main>
             <div className="content">
                 <ul className="products">
                     <li>
@@ -96,10 +105,12 @@ function App() {
                     </li>
                 </ul>
             </div>
-        </main>
-        <footer className= "footer">
+          </main>
+          <footer className= "footer">
             &copy; 2022 Onyx Cougar
-        </footer>
+          </footer>
+        </div>
+      </body>
     </div>
   );
 }
