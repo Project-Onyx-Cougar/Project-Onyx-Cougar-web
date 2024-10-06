@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from "./Home/Home";
 import Products from "./Products/Products";
+import CheckoutSteps from './Payment/CheckoutSteps';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
   return (
     <Router>
       <div className="grid-container">
+      <head>
         <link rel="stylesheet" href="style.css" />
         <title>Onyx Cougar</title>
 
@@ -31,6 +33,7 @@ function App() {
               <div className="header-links">
                   <Link to="/">Home</Link>
                   <Link to="/catalog">Catalog</Link>
+                  <Link to="/payment">Payment</Link>
               </div>
             </header>
             <aside className="sidebar">
@@ -50,6 +53,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/catalog" element={<Products />} />
+                <Route path="/payment" element ={<CheckoutSteps />}></Route>
               </Routes>
             </main>
             <footer className= "footer">
@@ -57,6 +61,7 @@ function App() {
             </footer>
           </div>
         </body>
+      </head>
       </div>
     </Router>
   );
