@@ -2,28 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const openMenu = () => {
+  document.querySelector(".sidebar")?.classList.add("open");
+}
+
+const closeMenu = () => {
+  document.querySelector(".sidebar")?.classList.remove("open");
+}
+
 function App() {
-
-    const openMenu = () => {
-        document.querySelector(".sidebar")?.classList.add("open");
-    }
-
-    const closeMenu = () => {
-        document.querySelector(".sidebar")?.classList.remove("open");
-    }
-
-    return (
-
-        <div className="grid-container">
-{/* <head>
-        <title>Onyx Cougar</title>
-        <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div> */}
+  return (
+    <div className="grid-container">
         <header className="header">
             <div className="brand">
-                <button onClick={openMenu}>&#9776;</button>
+                <button onClick={openMenu}>&#9776</button>
                 <a href="index.html">Onyx Cougar</a>
             </div>
             <div className="header-links">
@@ -31,21 +23,19 @@ function App() {
                 <a href="signin.html">Sign In</a>
             </div>
         </header>
-            <aside className="sidebar">
-                <h3>Shopping Categories</h3>
-                <button className="sidebar-close-button" onClick={closeMenu}>
-                    x
-                </button>
-                <ul>
-                    <li>
-                        <a href="index.html">Pants</a>
-                    </li>
+        <aside className="sidebar">
+            <h3>Shopping Categories</h3>
+            <button className="sidebar-close-button" onClick={closeMenu}>x</button>
+            <ul>
+                <li>
+                    <a href="index.html">Pants</a>
+                </li>
 
-                    <li>
-                        <a href="index.html">Shirts</a>
-                    </li>
-                </ul>
-            </aside>
+                <li>
+                    <a href="index.html">Shirts</a>
+                </li>
+            </ul>
+        </aside>
         <main>
             <div className="content">
                 <ul className="products">
@@ -107,12 +97,10 @@ function App() {
                 </ul>
             </div>
         </main>
-        <footer>
+        <footer className= "footer">
             &copy; 2022 Onyx Cougar
         </footer>
     </div>
-
-
   );
 }
 

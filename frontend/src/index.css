@@ -1,10 +1,9 @@
 /*test*/
 
-html {
+html { 
   font-size: 1rem;
   box-sizing: border-box;
 }
-
 body {
   font: 1.6rem Helvetia;
   height: 100vh;
@@ -14,9 +13,9 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+      "header"
+      "main"
+      "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -31,20 +30,17 @@ body {
   align-items: center;
   padding: 0.5rem;
 }
-
 .brand a {
   color: #ffffff;
   font-size: 3rem;
   font-weight: bold;
   text-decoration: none;
 }
-
 .header-links a {
   color: #ffffff;
   text-decoration: none;
   padding: 1rem;
 }
-
 .header-links a:hover {
   color: #ff8000;
 }
@@ -52,7 +48,6 @@ body {
 .main {
   grid-area: main;
 }
-
 .footer {
   grid-area: footer;
   background-color: #203040;
@@ -61,12 +56,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 /* not showing footer after this step */
 a {
   text-decoration: none;
 }
-
 a:hover {
   color: #ff8000;
 }
@@ -79,7 +72,6 @@ a:hover {
   color: #ffffff;
   cursor: pointer;
 }
-
 .sidebar {
   position: fixed;
   transform: translateX(-30rem);
@@ -87,11 +79,9 @@ a:hover {
   background-color: #f0f0f0;
   height: 100%;
 }
-
 .sidebar.open {
   transform: translateX(0);
 }
-
 .sidebar-close-button {
   border-radius: 50%;
   border: 0.1rem #000000 solid;
@@ -113,7 +103,6 @@ a:hover {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .products li {
   list-style-type: none;
   padding: 0;
@@ -122,34 +111,28 @@ a:hover {
   height: 50rem;
   border-bottom: 0.1rem #c0c0c0 solid;
 }
-
 .product {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-
 .product-name {
   font-size: 2rem;
   font-weight: bold;
 }
-
 .product-brand {
   font-size: 1.2rem;
   color: #808080;
 }
-
 .product-price {
   font-size: 2rem;
   font-weight: bold;
 }
-
 .product-image {
   max-width: 34rem;
   max-height: 34rem;
 }
-
 .product-rating {
   margin-bottom: 1rem;
 }
