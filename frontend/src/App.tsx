@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home/Home";
 import Products from "./Products/Products";
+import Orders from './Orders/Orders'
+import OrderDetail from './Orders/OrderDetail'; // Adjust the path based on your folder structure
 import CheckoutSteps from './Payment/CheckoutSteps';
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
               <div className="header-links">
                   <Link to="/">Home</Link>
                   <Link to="/catalog">Catalog</Link>
+                  <Link to="/orders">Orders</Link>
                   <Link to="/payment">Payment</Link>
               </div>
             </header>
@@ -53,6 +56,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/catalog" element={<Products />} />
+                <Route path="orders" element={<Orders />}></Route>
+                <Route path="/order/:id" element={<OrderDetail />}></Route>
                 <Route path="/payment" element ={<CheckoutSteps />}></Route>
               </Routes>
             </main>
