@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home/Home";
 import Products from "./Products/Products";
 import Orders from './Orders/Orders'
+import OrderDetail from './Orders/OrderDetail';
 
 function App() {
 
